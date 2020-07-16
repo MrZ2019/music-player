@@ -1,0 +1,163 @@
+<div>
+    <Tabs value="name2" type="card" closable @on-tab-remove="handleTabRemove">
+        <TabPane label="标签一" v-if='tab0' name="name1">
+            <Button type="primary">Primary123</Button>
+            <Icon type="ios-hand" size='32' />
+        </TabPane>
+        <TabPane label="标签二" name="name2" v-if='tab1'>
+            <Col span="8">
+            <Menu :theme="'dark'">
+                <Submenu name="1">
+                    <template slot="title">
+                        <Icon type="ios-paper" />
+                        内容管理
+                    </template>
+                    <MenuItem name="1-1">文章管理</MenuItem>
+                    <MenuItem name="1-2">评论管理</MenuItem>
+                    <MenuItem name="1-3">举报管理</MenuItem>
+                </Submenu>
+                <Submenu name="2">
+                    <template slot="title">
+                        <Icon type="ios-people" />
+                        用户管理
+                    </template>
+                    <MenuItem name="2-1">新增用户</MenuItem>
+                    <MenuItem name="2-2">活跃用户</MenuItem>
+                </Submenu>
+                <Submenu name="3">
+                    <template slot="title">
+                        <Icon type="ios-stats" />
+                        统计分析
+                    </template>
+                    <MenuGroup title="使用">
+                        <MenuItem name="3-1">新增和启动</MenuItem>
+                        <MenuItem name="3-2">活跃分析</MenuItem>
+                        <MenuItem name="3-3">时段分析</MenuItem>
+                    </MenuGroup>
+                    <MenuGroup title="留存">
+                        <MenuItem name="3-4">用户留存</MenuItem>
+                        <MenuItem name="3-5">流失用户</MenuItem>
+                    </MenuGroup>
+                </Submenu>
+            </Menu>
+            </Col>
+        </TabPane>
+        <TabPane label="Form" name="name3" v-if='tab2'>
+            <Poptip trigger="focus">
+                <Input v-model="value15" prefix="logo-usd" placeholder="Enter number" style="width: 120px" />
+                <div slot="content">{{ formatNumber }}</div>
+            </Poptip>
+            <Tooltip content="3 done / 3 in progress / 4 to do" style="width: 100%">
+                <Progress :percent="60" status="active" />
+            </Tooltip>
+            <Upload multiple type="drag" action="//jsonplaceholder.typicode.com/posts/">
+                <div style="padding: 20px 0">
+                    <Icon type="ios-cloud-upload" size="52" style="color: #3399ff"></Icon>
+                    <p>Click or drag files here to upload</p>
+                </div>
+            </Upload>
+            <ColorPicker v-model="color3" alphaz1 />
+        </TabPane>
+        <TabPane label="表格" name="name4" v-if='tab3'>
+            <i-table :columns="columns6" :data="data5"></i-table>
+            <Slider v-model="value9" :tip-format="format" show-input></Slider>
+            <DatePicker type="daterange" placeholder="Select date" style="width: 200px"></DatePicker>
+            <TimePicker type="time" placeholder="Select time" style="width: 168px"></TimePicker>
+            <Cascader :data="data" trigger="hover"></Cascader>
+            <InputNumber :max="10000" v-model="value9" :formatter="value => `$ ${value}`.replace(/B(?=(d{3})+(?!d))/g, ',')" :parser="value => value.replace(/$s?|(,*)/g, '')"></InputNumber>
+            <Rate v-model="value4" character="好" allow-half />
+        </TabPane>
+        <TabPane label="视图" name="name5" v-if='tab4'>
+            <Alert banner closable type="warning">Notice: notification contents...</Alert>
+            <Button @click="closable">Display a closable message</Button>
+            <Button type="primary" @click="renderFunc">Open notice</Button>
+            <Button @click="modal2 = true">Custom header and footer</Button>
+            <Modal v-model="modal2" width="360">
+                <p slot="header" style="color:#f60;text-align:center">
+                    <Icon type="ios-information-circle"></Icon>
+                    <span>Delete confirmation</span>
+                </p>
+                <div style="text-align:center">
+                    <p>After this task is deleted, the downstream 10 tasks will not be implemented.</p>
+                    <p>Will you delete it?</p>
+                </div>
+                <div slot="footer">
+                    <Button type="error" size="large" long :loading="true">Delete</Button>
+                </div>
+            </Modal>
+            <Button @click="value2 = true" type="primary">Open</Button>
+            <Drawer title="Basic Drawer" placement="left" :closable="false" v-model="value2">
+                <p>Some contents...</p>
+                <p>Some contents...</p>
+                <p>Some contents...</p>
+            </Drawer>
+            <Tree :data="data11" show-checkbox></Tree>
+            <Tooltip placement="top" content="Tooltip text" :delay="1000" theme="light">
+                <Button>Delay 1 second to show</Button>
+                <div slot="content">
+                    <p>Display multiple lines of information</p>
+                    <p><i>Can customize the style</i></p>
+                </div>
+            </Tooltip>
+
+            <Avatar style="background-color: #87d068" icon="ios-person" />
+ <Divider />
+            <Carousel
+                    v-model="value3"
+                    :autoplay="setting.autoplay"
+                    :autoplay-speed="setting.autoplaySpeed"
+                    :dots="setting.dots"
+                    :radius-dot="setting.radiusDot"
+                    :trigger="setting.trigger"
+                    :arrow="setting.arrow">
+                    <CarouselItem>
+                        <div class="demo-carousel">1</div>
+                    </CarouselItem>
+                    <CarouselItem>
+                        <div class="demo-carousel">2</div>
+                    </CarouselItem>
+                    <CarouselItem>
+                        <div class="demo-carousel">3</div>
+                    </CarouselItem>
+                    <CarouselItem>
+                        <div class="demo-carousel">4</div>
+                    </CarouselItem>
+                </Carousel>
+
+
+ <Divider />
+                <Timeline>
+                        <TimelineItem color="green">
+                            <Icon type="ios-trophy" slot="dot"></Icon>
+                            <span>发布里程碑版本</span>
+                        </TimelineItem>
+                        <TimelineItem>发布1.0版本</TimelineItem>
+                        <TimelineItem>发布2.0版本</TimelineItem>
+                        <TimelineItem>发布3.0版本</TimelineItem>
+                    </Timeline>
+                    <Divider />
+
+                    <Time :time="time1" :interval="1"/>
+
+
+                    <i-Circle :percent="35" stroke-color="#ff5500">
+                            <span class="demo-Circle-inner">
+                                <Icon type="ios-close" size="50" style="color:#ff5500"></Icon>
+                            </span>
+                        </i-Circle>
+
+                        <Affix :offset-top="100" >
+                                <span class="demo-affix">Fix the position at the top of 100px at the top</span>
+                            </Affix>
+
+
+
+                            <BackTop>
+                                   <div class="top">返回顶端</div>
+                               </BackTop>
+
+
+                                <Spin></Spin>npm 
+        </TabPane>
+    </Tabs>
+</div>

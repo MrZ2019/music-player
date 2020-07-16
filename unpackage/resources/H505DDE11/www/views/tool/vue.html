@@ -1,0 +1,17 @@
+<div>
+<div @click='emitChange'>{{name}}{{age}}</div>
+
+<input type="text" v-model='lastName'/>
+
+<test1 :field.sync='lastName' v-if='showTest1'>
+<template >
+	
+</template>
+</test1>
+
+{{lastName}}123
+
+<base-input :label='"name"' :value='"name"' :placeholder='"your name"' v-model='msg' :src='"abc"'></base-input>
+
+{{msg}}{{currentRoute}}
+</div>

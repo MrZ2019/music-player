@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--
+        必要时在以下 META 标记中自定义内容安全策略。将 "unsafe-inline" 添加到 default-src 以启动内联 JavaScript。
+      有关详细信息，请参阅 http://go.microsoft.com/fwlink/?LinkID=617521
+    -->
+    <meta http-equiv="Content-Security-Policy">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+
+    <script id="__bs_script__">//<![CDATA[
+    if (self != top)
+        document.write("<script async src='/browser-sync/browser-sync-client.js?v=2.23.6'><\/script>".replace("HOST", location.hostname));
+    //]]></script>
+    <link rel="stylesheet" href="./libs/muse/muse-ui.css">
+    <link rel="stylesheet" href="./libs/muse/theme-default.css">
+    <link rel="stylesheet" href="./libs/iview/iview.css">
+
+
+    <link rel="stylesheet" href="./libs/icon/icon.css">
+
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/tool/iview/demo.css">
+    <!-- 引入Vue -->
+    <script src="./libs/jquery.min.js"></script>
+    <script src="./libs/vue.js"></script>
+    <script src="./libs/vue-router.js"></script>
+    <script src="./libs/vue-gesture.js"></script>
+    <script src="./libs/muse/muse-ui.js"></script>
+    <script src="./libs/iview/iview.min.js"></script>
+    <title>BlankCordovaApp1</title>
+</head>
+
+<body>
+    <div id="app" class='' v-cloak>
+        <mu-drawer :open="open" :docked="true">
+          <mu-list>
+            <mu-list-item title="Menu Item 1"></mu-list-item>
+            <mu-list-item title="Menu Item 2"></mu-list-item>
+            <mu-list-item title="Menu Item 3"></mu-list-item>
+            <!-- <mu-list-item v-if="docked" @click.native="open = false" title="Close"/> -->
+          </mu-list>
+        </mu-drawer>
+        <vue-gesture :type="'swipeLeft'" :call="openDrawer.bind(this,'swipeLeft')">
+        <div class="main" @click='closeDrawer'>
+
+
+        <keep-alive>
+            <router-view :time='time'></router-view>
+        </keep-alive>
+        </div>
+        </vue-gesture>
+        <mu-paper>
+          <mu-bottom-nav  @change='handleChange'>
+            <router-link to="/home"> 
+                <mu-bottom-nav-item value="one" title="Home" icon="restore" >
+                    
+                </mu-bottom-nav-item>  
+            </router-link>
+
+            <router-link to="/basic/">
+                <mu-bottom-nav-item value="two" title="Basic" icon="favorite">
+                </mu-bottom-nav-item>
+            </router-link>
+
+            <router-link to="/tool/">
+            <mu-bottom-nav-item value="three" title="Tool" icon="location_on"></mu-bottom-nav-item>
+              </mu-bottom-nav>
+            </router-link>
+        </mu-paper>
+    </div>
+ 
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="scripts/platformOverrides.js"></script>
+    <script type="text/javascript" src="./libs/id3-minimized.js"></script>
+    <script type="text/javascript" src="scripts/common.js"></script>
+
+    <script type="text/javascript" src="scripts/home.js"></script>
+
+    <script type="text/javascript" src="scripts/basic/defineProperty.js"></script>
+    <script type="text/javascript" src="scripts/basic/async.js"></script>
+    <script type="text/javascript" src="scripts/basic/canvas.js"></script>
+    <script type="text/javascript" src="scripts/basic/drag.js"></script>
+    <script type="text/javascript" src="scripts/basic.js"></script>
+    
+    <script type="text/javascript" src="scripts/tool/jquery.js"></script>
+    <script type="text/javascript" src="scripts/tool/vue.js"></script>
+    <script type="text/javascript" src="scripts/tool.js"></script>
+
+    <script type="text/javascript" src="scripts/iview/iViewDemoModule.js"></script>
+    <script type="text/javascript" src="scripts/iview.js"></script>
+
+    <script type="text/javascript" src="scripts/index.js"></script>
+</body>
+
+</html>

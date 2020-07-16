@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<script>
+		document.documentElement.style.fontSize = (window.innerWidth / 7.5) + 'px'
+	</script>
+	<link rel="stylesheet" href="css/h5.css">
+	<meta http-equiv="Content-Security-Policy">
+	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+	<script type="text/javascript" src="cordova.js"></script>
+	<script type="text/javascript" src="scripts/platformOverrides.js"></script>
+	<script src='libs/id3-minimized.js'></script>
+	<script>
+	window.addEventListener('message', function(e) {
+		try {
+			window.frames[0].postMessage(eval(e.data), '*');
+		}catch(e) {
+			alert(e)
+		}
+	})
+
+	// location = 'http://192.168.7.137:3002'
+	</script>
+</head>
+<body>
+	
+
+<iframe src="http://192.168.3.13:3003" frameborder="0"></iframe>
+
+</body> 
+</html>
