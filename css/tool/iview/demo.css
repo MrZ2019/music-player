@@ -1,0 +1,22 @@
+.demo-split{
+       height: 200px;
+       border: 1px solid #dcdee2;
+   }
+   .demo-split-pane{
+       padding: 10px;
+   }
+
+
+   .demo-carousel {
+   	background: olive;
+   	height: 128px;
+   }
+
+
+    .top{
+        padding: 10px;
+        background: rgba(0, 153, 229, .7);
+        color: #fff;
+        text-align: center;
+        border-radius: 2px;
+    }

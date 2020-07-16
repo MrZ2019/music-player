@@ -1,0 +1,532 @@
+body {
+	font-size: .26rem;
+	margin: 0;
+	background: #000 url(./images/bg.png);
+}
+* {
+	box-sizing: border-box;
+}
+.header {
+	background: url(./images/header.png) center center no-repeat;
+	background-size: contain;
+	height: 5.08rem;
+}
+
+.btn-rule {
+	color: #fff;
+	position: absolute;
+	right: .36rem;
+	top: .52rem;
+	font-size: .22rem;
+	width: 1rem;
+	line-height: .32rem;
+	background: green;
+	border-radius: 50%;
+	padding: .2rem .25rem;
+	text-align: center;
+}
+
+
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    background: rgba(0,0,0,.7);
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s;
+
+}
+.modal.show {
+	opacity: 1;
+	z-index: 10;
+	visibility: visible;
+
+}
+.modal .dialog {
+    min-width: 20%;
+    max-width: 80%;
+    margin: 30%  auto 0; 
+    background: #fff;
+    text-align: center;
+    line-height: .4rem;
+    padding: 0 .2rem;
+    border-radius: .2rem
+}
+
+.dialog .title {
+    font-size: .35rem;
+    line-height: .9rem;
+}
+
+.dialog .btns {
+    padding: .4rem 0rem .2rem;
+}
+.dialog .btns {
+    display: flex;
+    justify-content: space-around;
+}
+.dialog .btns span {
+    background: green;
+    color: #fff;
+    line-height: .5rem;
+    display:inline-block;
+    padding: 0 .2rem;
+    max-width: 1.5rem;
+    flex: 1;
+    border-radius: .1rem;
+}
+
+.tab {
+	height: .58rem;
+	display: flex;
+	text-align: center;
+	color: #fff;
+	line-height: .58rem;
+}
+
+.tab span {
+	flex: 1;
+	background: #125520;
+}
+
+.tab span.active {
+	background: url(./images/active.png) center center no-repeat;
+	background-size: cover;
+	height: .68rem;
+}
+
+#app > .x1 {
+	padding: .4rem;
+}
+
+.running > .a1 {
+	background: rgba(15,27,8,.6) url(./images/icon1.png) .4rem .3rem no-repeat;
+	background-size: 1.33rem;
+	height: 1.85rem;
+	color: #cecdcd;
+	padding: .36rem .52rem .36rem 1.98rem;
+}
+
+.running > .a1 .b1 {
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 3;
+	overflow: hidden;	
+	line-height: .4rem
+}
+
+.mainpage .a2 {
+	background: url(./images/a2.png) center center no-repeat;
+	background-size: contain;
+	margin: .4rem 0 0;
+	height: .83rem;
+	color: #fff;
+	font-size: .40rem;
+	line-height: .58rem;
+	text-align: center;
+}
+
+.mainpage .a3 {
+	background: url(./images/a3.png) center center no-repeat;
+	background-size: contain;
+	height: .86rem;
+	line-height: .86rem;
+	padding: 0 1.11rem;
+	font-size: .26rem;
+	color: #333;
+}
+
+.a3 .b1 {
+	margin: 0 .8rem 0 0;
+}
+
+.a3 .val2 {
+	color: #ba0400;
+}
+
+.running > .x1 {
+	height: 5.11rem;
+	background: url(./images/a4.png) center -.86rem no-repeat;
+	background-size: cover;
+	padding: .36rem .44rem;
+}
+
+.x1 img {
+	width: 2.18rem;
+	height:1.23rem;
+}
+.running > .x1 > .a4 > .b2 {
+	width: 1.12rem;
+	text-align: center;
+	color: #cdcdcd;
+	font-size: .32rem;
+	background: url(images/vs.png) center top no-repeat;
+	background-size: contain;
+	position: relative;
+	top: -.2rem;
+
+}
+
+.running > .x1 > .a4 > .b2 .time {
+	position: relative;
+	top: 2.15rem;
+}
+.running > .x1 > .a4 {
+	display: flex;
+	justify-content: space-between;
+/*	border-bottom: .05rem dashed;
+	padding: 0 0 .38rem 0;*/
+}
+
+.running > .x1 > .a4 .b1 .name {
+	color: #cecdcd;
+	font-size: .26rem;
+	text-align: center;
+	margin: .08rem 0 0;
+}
+
+.running > .x1 > .a4 .b1 .btn-join {
+	height: .49rem;
+	line-height: 0.49rem;
+	width: 2.18rem;
+	background: #ff9d1e;
+	font-size: .3rem;
+	text-align: center;
+	font-weight: bold;
+	border-radius: .25rem;
+	margin: .2rem 0 0;
+}
+
+.running > .x1 > .a5 {
+	background: url(./images/icon2.png) 4.5rem .5rem no-repeat;
+	background-size: 1.33rem;
+	height: 1.85rem;
+	color: #cecdcd;
+	padding: .5rem 0rem .36rem 0rem;
+}
+
+.running > .x1> .a5 .b1 {
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 3;
+	overflow: hidden;	
+	line-height: .4rem;
+	width: 4.2rem;
+}
+.over .a3 {
+	padding: 0 .41rem;
+	display: flex;
+	text-align: center;
+
+}
+.over .a3 .b1 {
+	margin: 0;
+	flex: 1;
+}
+
+.running.over > .x1 {
+	height: 3.1rem;
+	background: url(./images/a41.png) center -.75rem repeat;
+	background-size: 6.75rem;
+	padding: .36rem .44rem;
+	margin-top: -.02rem;
+	overflow: hidden;
+}
+
+.x1 + .a3 {
+	margin-top: .4rem;
+}
+.running.over > .x1 > .y1 {
+	height: .45rem;
+	line-height: .45rem;
+	font-size: .36rem;
+	color: #fff;
+	background: #797979;
+	width: 1.7rem;
+	text-align: center;
+	margin:  auto;
+	position: relative;
+	z-index: 10;
+}
+.running.over > .x1 > .a4 {
+	border: .05rem solid #797979;
+	padding: .25rem .16rem;
+	position: relative;
+	top: -.225rem;
+}
+
+.running.over .x1 img {
+	width: 1.66rem;
+	height: 0.93rem;
+}
+
+.running.over > .x1 > .a4 > .b2 {
+	width: 2rem;
+	background: none;
+}
+
+.running.over > .x1 > .a4 > .b2 .c1 {
+	font-size: .53rem;
+	color: #fff;
+	font-weight: bold;	
+	letter-spacing: .13rem;
+	position: relative;
+	top: .16rem;
+}
+
+.running.over > .x1 > .a4 > .b2 .c2 {
+	font-size: .22rem;
+	color: #b8b8b8;
+	position: relative;
+	top: .2rem;
+}
+
+.running.over > .x1 > .a4 > .b2 .time {
+	position: static;
+}
+
+.running.over > .x1.right > .y1 {
+	background: #2bcb4e;
+	color: #000;
+}
+
+.running.over > .x1.right > .a4 {
+	border-color: #2bcb4e;
+}
+
+.running.over .btn-get {
+	width: 5.24rem;
+	height: .7rem;
+	line-height: .7rem;
+	margin: auto;
+	text-align: center;
+	font-size: .38rem;
+	background: url(images/orange.png) center center no-repeat;
+	background-size: contain;
+	margin-top: -.585rem;
+	position: relative;
+	z-index: 100;
+}
+
+.running.over > .x1.right > .a4 {
+	padding-bottom: .5rem;
+}
+
+.running.over > .x1.right {
+	height: 3.5rem;
+}
+.running.over > .x1.wrong {
+	height: 3.5rem;
+}
+
+.running.over > .x1.wrong > .a4 {
+	padding-bottom: .5rem;
+}
+.running.over.ready > .x1 {
+	padding: .45rem .4rem;
+}
+.running.over.ready > .x1 {
+	height: 2.81rem;
+
+}
+.running.over.ready > .x1 .a4{
+	top: 0;
+
+}
+.running.over.ready > .x1:nth-child(odd) {
+	background: url(images/a4.png) left -1.05rem no-repeat;
+	background-size: 6.75rem;
+}
+
+.running.over.ready > .x1:nth-child(even) {
+	background: url(images/a4.png) left -.85rem no-repeat;
+	background-size: 6.75rem;
+}
+
+/* new */
+
+.hide {
+	display: none;
+}
+
+
+.share {
+	background-size: cover;
+	height: 6.5rem;
+	margin: auto;
+	position: relative;
+	overflow: hidden;
+	color: #fff;
+}
+.share .a1 {
+	margin: 0.4rem auto 0;
+	background: url(images/bg3.png) center center no-repeat;
+	background-size: contain;
+	height: 6rem;
+	width: 5rem;
+}
+.shareDlg .title{
+	display: none;
+}
+.shareDlg .dialog{
+	padding: 0;
+
+	background: url(images/bg2.png) center center no-repeat;
+
+}
+
+.shareDlg .btns span {
+	background: #da6048
+}
+.shareDlg .content{
+	padding: 0;
+}
+.share .a1 {
+}
+.share img {
+	width: 2.3rem;
+	margin: 0.76rem auto 0;
+}
+
+.share .a1 .b1 {
+	font-size: .25rem;
+	margin: 0 auto  0.1rem ;
+}
+.share .a1 .b2 {
+	font-size: .35rem;
+	line-height: .5rem;
+}
+.share .a1 .b3 {
+	font-size: .26rem;
+	line-height: .5rem;
+	margin: 0.3rem auto 0;
+
+}
+.share .a2 {
+	font-size: .21rem;
+	line-height: .55rem;
+	height: .55rem;
+	margin: 0.36rem auto 0;
+	background: url(images/line.png) center center no-repeat;
+	background-size: contain;
+	width: 4rem;
+}
+
+
+
+/* new */
+
+.wxshare {
+	background: url(./images/sh1.jpg) center center no-repeat;
+	position: relative;
+	overflow: hidden;
+	color: #333;
+}
+
+.wxshare .box{
+	width: 6.54rem;
+	height: 9.26rem;
+	margin: .43rem  auto;
+	background: url(./images/sh2.png) center center no-repeat;
+	background-size: 110%;
+	position: relative;
+	padding: .33rem;
+}
+
+.wxshare .close {
+	position: absolute;
+	width: .76rem;
+	height: .76rem;
+	background: url(./images/sh_close.png) center center no-repeat;
+	background-size: contain;
+	right: -.38rem;	
+	top: -.38rem;
+}
+
+.wxshare .a1 img {
+	width: 1.21rem;
+	height: 1.21rem;
+	border-radius: 50%;
+	background: red;
+	vertical-align: middle;
+}
+
+.wxshare .a1 .b2 {
+	width: 4.4rem;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.wxshare .a1 .b2 .c1 {
+	font-size: .46rem;
+	font-weight: bold;
+}
+
+.wxshare .a1 .b2 .c2 {
+	font-size: .22rem;
+	margin: .15rem 0 0 .05rem;
+}
+
+.wxshare .a2 {
+	margin: .46rem auto;
+	width: 5.33rem;
+	border: .03rem dashed ;
+	display: flex;
+	padding: 0.12rem .5rem;
+	justify-content: space-between;
+}
+
+.wxshare .a2 img {
+	width: 1.4rem;
+	border: 0.04rem solid
+}
+
+.wxshare .a2  {
+	flex: 1;
+	flex-basis: 1.4rem;
+	flex-grow: 0;
+	text-align: center;
+	background: #c3d8b9 url(./images/vs2.png) center .23rem no-repeat;
+	background-size: contain;
+}
+
+.wxshare .a3  {
+	margin: .87rem auto 0.94rem;
+	font-size: .6rem;
+	font-weight: bold;
+	text-align: center;
+}
+
+.wxshare .a4 .b1 {
+	margin: .6rem .62rem .5rem .4rem;
+	float: left;
+	width: 3.2rem;
+}
+.wxshare .a4 .b1 .c1 {
+	font-size: .28rem;
+	font-weight: bold;
+	line-height: .6rem;
+}
+.wxshare .a4 .b1 .c2 {
+	font-size: .24rem;
+	line-height: .34rem;
+}
+.wxshare .a4 .b2 {
+	float: right;
+	margin: .5rem 0 0;
+	text-align: center;
+}
+
+.wxshare .a4 .b2 img {
+	width: 1.56rem;
+	height: 1.56rem;
+}
+
+.wxshare .a4 .b2 .c1 {
+	font-size: .22rem;
+}
