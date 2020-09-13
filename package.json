@@ -6,6 +6,6 @@
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "yargs": "^6.0.0",
-    "yargs-parser": "^10.0.0"
+    "yargs-parser": "^13.1.2"
   }
 }
