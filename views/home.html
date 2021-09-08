@@ -2,14 +2,25 @@
 
                 <h1>{{time}}</h1>
                 <mu-raised-button label="MZJ" class="demo-flat-button" primary @click='toMZJ'></mu-raised-button>
-                <mu-raised-button label="Ionic" class="demo-raised-button" secondary @click='toIonic'></mu-raised-button>
+				<mu-raised-button label="内网IP" class="demo-flat-button"  @click='setInnerIP' v-show="!isOutMode"></mu-raised-button>
+				<mu-raised-button label="外网IP" class="demo-flat-button"  @click='setIP' v-show="isOutMode"></mu-raised-button>
+				<br/>
+				<br/>
+                <mu-switch label="外网模式" v-model="isOutMode" class="demo-switch" />
+                <mu-switch label="开发模式" v-model="isDevMode" class="demo-switch" />
+				
+<!--               <mu-raised-button label="Ionic" class="demo-raised-button" secondary @click='toIonic'></mu-raised-button>
                 <mu-float-button icon="add" class="demo-float-button" @click='toReact'>React</mu-float-button>
+				
 
                 <br/>
-                <mu-float-button icon="add" class="btn-send" @click='send()'>send</mu-float-button>
+                <mu-float-button icon="add" class="btn-send" @click='send()'>send</mu-float-button> -->
+				
+				<br/>
+				<br/>
                 <mu-float-button icon="add" class="btn-reload" @click='reload'>reload</mu-float-button>
-                <mu-float-button icon="add" class="btn-demo" @click='toDemo'>demo1</mu-float-button>
-                <mu-time-picker hintText="24小时制12345" format="24hr"></mu-time-picker>
+                <!-- <mu-float-button icon="add" class="btn-demo" @click='toDemo'>demo1</mu-float-button> -->
+                <!-- <mu-time-picker hintText="24小时制12345" format="24hr"></mu-time-picker> -->
 
                 <img src="" alt="" id="picture">
 

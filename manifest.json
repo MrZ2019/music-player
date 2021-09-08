@@ -224,5 +224,6 @@
                 }
             }
         }
-    }
+    },
+    "screenOrientation" : [ "portrait-primary" ]
 }
